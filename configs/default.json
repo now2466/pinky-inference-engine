@@ -1,0 +1,13 @@
+{
+  "width": 320,
+  "height": 240,
+  "ignore_top": 110,
+  "classes": ["background", "lane_left", "lane_right", "crosswalk", "speed_bump"],
+  "device": "auto",
+  "cpu_threads": 2,
+  "confidence_thresholds": {},
+  "min_component_pixels": {},
+  "max_body_bytes": 8388608,
+  "max_image_pixels": 2073600,
+  "request_timeout_seconds": 5.0
+}

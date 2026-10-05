@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pinky-inference-engine"
+version = "0.1.0"
+description = "Transport-independent real-time lane segmentation engine"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "opencv-python-headless>=4.10,<5", "torch>=2.9,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+pinky-engine = "pinky_engine.server:main"
+pinky-stream = "pinky_engine.client:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

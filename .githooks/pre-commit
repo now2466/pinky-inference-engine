@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+set -eu
+if command -v gitleaks >/dev/null 2>&1; then
+    exec gitleaks git --pre-commit --staged --redact --no-banner
+elif [ -x "${GITLEAKS_BIN:-}" ]; then
+    exec "$GITLEAKS_BIN" git --pre-commit --staged --redact --no-banner
+else
+    echo 'Gitleaks is required: install it or set GITLEAKS_BIN to its executable.' >&2
+    exit 1
+fi

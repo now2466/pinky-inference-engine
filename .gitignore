@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+models/*
+!models/.gitkeep
+outputs/*
+!outputs/.gitkeep
+*.mp4
+*.pt
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+credentials*.json
